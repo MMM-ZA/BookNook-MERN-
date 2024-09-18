@@ -1,8 +1,9 @@
 import express from "express";
-import { PORT, mongoDURL } from "./config.js"; 
-import mongoose, { mongo } from "mongoose";
+import { PORT, mongoDBURL } from "./config.js"; 
+import mongoose from "mongoose";
 
 const app = express()
+
 
 app.get('/', (request,response) => {
     console.log(request);
@@ -11,7 +12,7 @@ app.get('/', (request,response) => {
 
 
 mongoose
-.connect(mongoDURL)
+.connect(mongoDBURL)
 .then(() => {
     console.log('App is connected to database'); 
     app.listen(PORT, () => {
