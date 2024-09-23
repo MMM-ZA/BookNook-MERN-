@@ -24,4 +24,4 @@ const bookSchema = mongoose.Schema(
 
 
 
-export const Book = mongoose.model('Person',bookSchema);
+export const Book = mongoose.model('Item',bookSchema);
